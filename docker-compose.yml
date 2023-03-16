@@ -1,0 +1,13 @@
+version: '3'
+services:
+  gis-db:
+    image: 'postgis/postgis:14-3.3-alpine'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pwdpostgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - '5432:5432'
+    volumes:
+      - /tmp/basic-postgis-data:/var/lib/postgresql/data
+      - ./scripts:/opt/share/scripts
