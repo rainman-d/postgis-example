@@ -49,4 +49,5 @@ Output:
 ```
 - Otherwise if using a different user, to set search path differently:
 ```
-set search_path to gis_p, public;.
+set search_path to gis_p, public;
+```
